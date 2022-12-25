@@ -1,0 +1,19 @@
+.indexSec {
+    width: 100%;
+    height: calc(100vh - 250px);
+    background-color: rgb(2, 2, 2);
+}
+
+.indexBg {
+    margin-top: 80px;
+    width: 100%;
+    height: calc(100vh - 250px);
+}
+
+.greeting {
+    color: aliceblue;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+}
