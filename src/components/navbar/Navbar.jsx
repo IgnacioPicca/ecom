@@ -8,11 +8,11 @@ function NavBar() {
     return (
         <div class="nav">
 
-            <Brand />
+            {/* <Brand /> */}
 
             <NavList />
 
-            <CartWidget />
+            {/* <CartWidget /> */}
 
         </div>
     );

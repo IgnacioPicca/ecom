@@ -1,10 +1,10 @@
-import brand from '../../assets/brand.jpg';
+import brand from '../../assets/brand.png';
 
 function Brand() {
     return (
-        <div>
+        <>
             <img src={brand} alt="brand-logo" class="brand"></img>
-        </div>
+        </>
     )
 }
 
