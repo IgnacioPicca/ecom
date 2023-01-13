@@ -1,14 +1,10 @@
-import bg from '../../assets/bg.jpg';
 import "./itemListContainer.css"
 
-function ItemListContainer(prop) {
+function ItemListContainer() {
     return (
         <section class="indexSec">
 
-            <p class="greeting">{prop.text}</p>
-            <p class="greeting">{prop.subtext}</p>
-
-            <img src={bg} alt="" class="indexBg" />
+            <p>Hola voy a ser un Grid con productos de la misma categoria</p>
 
         </section>
     );
