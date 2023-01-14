@@ -5,7 +5,7 @@ function Footer() {
 
         <footer class="footer">
 
-            <span>Yo soy un footer sin estilo :c </span>
+            <span>Made with ❤️ by iPicca. Inspired by Apple. For educational purposes only. </span>
 
         </footer>
     );

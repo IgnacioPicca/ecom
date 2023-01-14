@@ -1,12 +1,22 @@
-import "./itemListContainer.css"
+import React, { useState, useEffect } from "react";
+import Item from "../Item/Item";
+import getItems from "../../services/items.js";
+import ItemList from "../itemList/ItemList";
 
 function ItemListContainer() {
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        getItems().then((respuesta) => {
+            setItems(respuesta);
+        });
+    }, [])
+
     return (
-        <section class="indexSec">
-
-            <p>Hola voy a ser un Grid con productos de la misma categoria</p>
-
-        </section>
+        <div>
+            <ItemList items={items} />
+        </div>
     );
 }
 

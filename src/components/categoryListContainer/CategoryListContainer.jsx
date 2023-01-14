@@ -1,4 +1,4 @@
-import CategoryList from "../CategoryList/CategoryList";
+// import CategoryList from "../CategoryList/CategoryList";
 import "./categoryListContainer.css"
 
 
@@ -7,7 +7,7 @@ function CategoryListContainer() {
         <>
 
             <div class="categoryContainer">
-                <CategoryList />
+                {/* <CategoryList /> */}
             </div>
 
         </>

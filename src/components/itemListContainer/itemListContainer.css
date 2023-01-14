@@ -1,5 +1,5 @@
-.indexSec {
-    width: 100%;
-    background-color: aliceblue;
-    margin-top: 200px;
+.itemListContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
