@@ -1,0 +1,20 @@
+.nav-item {
+    color: #f5f5f7;
+    list-style: none;
+    padding: 2em;
+    opacity: .8;
+    transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+    transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+a {
+    color: #f5f5f7;
+    text-decoration: none;
+    opacity: .8;
+    transition: opacity 0.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}

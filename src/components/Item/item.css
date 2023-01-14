@@ -1,7 +1,7 @@
 .itemCard {
     width: 280px;
     box-shadow: 0 2px 7px #dfdfdf;
-    margin: 50px auto;
+    margin: 10px auto;
     background: #fafafa;
 }
 
@@ -20,21 +20,7 @@
 }
 
 .itemCard_details {
-    padding: 30px;
-}
-
-.itemCard_details h2 p {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 18px;
-    text-transform: uppercase;
-    color: #363636;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.itemCard_details h2 p:hover {
-    color: #fbb72c;
+    padding: 5px 30px;
 }
 
 .itemCard_details p {
@@ -42,45 +28,31 @@
     line-height: 22px;
     margin-bottom: 18px;
     color: #999;
+    height: 120px;
 }
 
 .itemCard_info {
     overflow: hidden;
     border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-
-.itemCard_info div {
-    float: left;
-    width: 50%;
+    padding: 20px;
 }
 
 .itemCard_price {
-    font-size: 18px;
-    color: #fbb72c;
-    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
 }
 
-.itemCard_price small {
-    font-size: 80%;
-    font-weight: 400;
-    text-decoration: line-through;
-    display: inline-block;
-    margin-right: 5px;
-}
-
-.itemCard_links {
-    text-align: right;
-}
-
-.itemCard_links a {
-    display: inline-block;
-    margin-left: 5px;
-    color: #e1e1e1;
+.itemCard_link {
+    margin: 5px;
+    color: #747373;
     transition: 0.3s;
     font-size: 17px;
+    vertical-align: middle;
 }
 
-.itemCard_links a:hover {
-    color: #fbb72c;
+.itemCard_link:hover {
+    color: #2997ff;
+    cursor: pointer;
 }

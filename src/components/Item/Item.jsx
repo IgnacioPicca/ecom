@@ -1,6 +1,6 @@
 import ".//item.css"
 
-function Item({ title, price, detail, imgurl }) {
+function Item({ title, price, detail, imgurl, category }) {
     return (
         <>
             <div class="itemCard">
@@ -18,15 +18,10 @@ function Item({ title, price, detail, imgurl }) {
                     <div class="itemCard_info">
 
                         <div class="itemCard_price">
-                            {/* <small>$96.00</small>$230.99 */}
-                            <h4>USD{price}</h4>
-                        </div>
+                            <span>$ {price}</span>
 
-                        <div class="itemCard_links">
-                            <a href=""><i class="fa fa-heart"></i></a>
-                            <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a href=""><span class="itemCard_link">See more</span></a>
                         </div>
-
                     </div>
                 </div>
             </div>

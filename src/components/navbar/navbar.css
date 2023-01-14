@@ -15,14 +15,3 @@
     display: flex;
     justify-content: space-around;
 }
-
-.nav-item {
-    color: #f5f5f7;
-    list-style: none;
-    padding: 2em;
-}
-
-a {
-    color: #f5f5f7;
-    text-decoration: none;
-}
