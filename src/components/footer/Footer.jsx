@@ -5,7 +5,7 @@ function Footer() {
 
         <footer class="footer">
 
-            <span>Made with 🤍 by iPicca. Inspired by Apple. For educational purposes only. </span>
+            <span>Made with 🤍 by <a href="https://github.com/IgnacioPicca">iPicca.</a>  Inspired by <a href="https://www.apple.com/">Apple.</a>  For educational purposes only. </span>
 
         </footer>
     );

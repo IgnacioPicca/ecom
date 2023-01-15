@@ -7,8 +7,8 @@ function ItemListContainer() {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        getItems().then((respuesta) => {
-            setItems(respuesta);
+        getItems().then((res) => {
+            setItems(res);
         });
     }, [])
 

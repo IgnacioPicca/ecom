@@ -7,3 +7,12 @@
     line-height: 22px;
     color: #999;
 }
+
+.footer a {
+    color: #44a3fb;
+    cursor: pointer;
+}
+
+.footer a:hover {
+    color: #00509b;
+}

@@ -118,5 +118,5 @@ function getItems() {
         }, 500);
     });
 }
-
 export default getItems;
+
