@@ -16,7 +16,7 @@ function NavList() {
 
                 <span class="nav-item"><GrApple /> </span>
 
-                <li class="nav-item" >
+                <li class="nav-item"  >
                     <a href="/" class="nav-link" > <MdDesktopMac /> Mac</a>
                 </li>
                 <li class="nav-item">
