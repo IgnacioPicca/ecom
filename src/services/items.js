@@ -111,13 +111,16 @@ const items = [
     },
 ];
 
-function getAllItems() {
+export function getAllItems() {
     return new Promise((res) => {
         setTimeout(() => {
             res(items);
         }, 500);
     });
 }
+
+export default getAllItems;
+
 
 export function getItem(id) {
 
@@ -145,4 +148,3 @@ export function getCategoryItems(idCat) {
     });
 }
 
-export default getAllItems;
