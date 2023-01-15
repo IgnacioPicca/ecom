@@ -5,34 +5,36 @@ import { GrApple } from "react-icons/gr";
 import { BsSmartwatch } from "react-icons/bs";
 import { MdDesktopMac } from "react-icons/md";
 import "./navlist.css";
+import { Link } from "react-router-dom";
 
 
 function NavList() {
     return (
 
-        <nav class="navbar">
+        <nav className="navbar">
 
-            <ul class="nav-item-container">
+            <ul className="nav-item-container">
 
-                <span class="nav-item"><GrApple /> </span>
 
-                <li class="nav-item"  >
-                    <a href="/" class="nav-link" > <MdDesktopMac /> Mac</a>
+                <span className="nav-item"><Link to="/" className="nav-link"><GrApple /></Link ></span>
+
+                <li className="nav-item"  >
+                    <Link to="/category/Computers" className="nav-link" ><MdDesktopMac /> Mac</Link >
                 </li>
-                <li class="nav-item">
-                    <a href="/" class="nav-link" > <FaTabletAlt /> iPad </a>
+                <li className="nav-item">
+                    <Link to="/category/iPad" className="nav-link" > <FaTabletAlt /> iPad </ Link>
                 </li>
-                <li class="nav-item">
-                    <a href="/" class="nav-link" > <FaMobileAlt /> iPhone</a>
+                <li className="nav-item">
+                    <Link to="/category/iPhone" className="nav-link" > <FaMobileAlt /> iPhone</ Link>
                 </li>
-                <li class="nav-item">
-                    <a href="/" class="nav-link" > <BsSmartwatch /> Watch</a>
-                </li>
-            </ul>
+                <li className="nav-item">
+                    <Link to="/category/iWatch" className="nav-link" > <BsSmartwatch /> Watch</ Link>
+                </li >
+            </ul >
 
-            <span class="cart nav-item"><FaShoppingBag /> </span>
+            <span className="cart nav-item"><FaShoppingBag /> </span>
 
-        </nav>
+        </nav >
     )
 }
 

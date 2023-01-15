@@ -6,6 +6,12 @@
     background: #fafafa;
 }
 
+.itemCard:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 7px #373636;
+    transition: 0.3s;
+}
+
 .itemCard_img {
     display: flex;
     align-items: center;
@@ -42,7 +48,7 @@
     font-size: 24px;
     color: #000000;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .itemCard_link {

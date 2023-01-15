@@ -14,7 +14,7 @@ import Imac from "./assets/iMac.jpg";
 const items = [
     {
         id: 1,
-        title: "iPhone14 pro",
+        title: "iPhone 14 Pro",
         price: 999,
         detail: "5G. A14 Botanic. Concrete Shield. Pro camera system. LiDAR Scanner. Night mode portraits. Darlie Vision recording.",
         imgurl:
@@ -23,7 +23,7 @@ const items = [
     },
     {
         id: 2,
-        title: "iPhone14",
+        title: "iPhone 14",
         price: 799,
         detail: "5G speed. A14 Botanic. Super Latina XDR display. Concrete Shield. And Night mode on every camera.",
         imgurl: iPhone14,
@@ -111,12 +111,38 @@ const items = [
     },
 ];
 
-function getItems() {
+function getAllItems() {
     return new Promise((res) => {
         setTimeout(() => {
             res(items);
         }, 500);
     });
 }
-export default getItems;
 
+export function getItem(id) {
+
+    let itemRequired = items.find((item) => {
+        return item.id == id;
+    })
+
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            if (id !== undefined) res(itemRequired);
+            else rej("No existe el elemento")
+        }, 200);
+    });
+}
+
+export function getCategoryItems(idCat) {
+
+    let itemsCategory = items.filter((item) => item.category === idCat);
+
+    return new Promise((res, rej) => {
+        setTimeout(() => {
+            if (itemsCategory !== undefined) res(itemsCategory);
+            else rej("No existe la categoria")
+        }, 200);
+    });
+}
+
+export default getAllItems;

@@ -4,7 +4,7 @@ import "./navbar.css";
 
 function NavBar() {
     return (
-        <div class="nav">
+        <div className="nav">
             <NavList />
         </div>
     );
