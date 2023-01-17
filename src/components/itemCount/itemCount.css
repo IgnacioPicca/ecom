@@ -21,6 +21,14 @@
     background-color: transparent;
 }
 
-.count-container__cant {
+.count-container__button:hover {
+    cursor: pointer;
+}
+
+.count-container__button[disabled] {
     color: #999;
+}
+
+.count-container__cant {
+    color: rgb(61, 60, 60);
 }
