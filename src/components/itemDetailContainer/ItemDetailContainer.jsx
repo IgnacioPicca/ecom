@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { getItem } from "../../services/items.js";
 import { useParams } from "react-router-dom";
 import "./itemDetailContainer.css";
+import ItemCount from "../itemCount/ItemCount.jsx";
 
 
 function ItemDetailContainer() {
@@ -33,8 +34,10 @@ function ItemDetailContainer() {
                 <h1 className="cardDetail_title">{item.title}</h1>
                 <h2 className="cardDetail_price">$ {item.price}</h2>
                 <p>{item.detail}</p>
-                {/* itemCount */}
-                <button className="cardDetail_details_cart">ADD TO CART</button>
+                <div className="cardDetail_buttons">
+                    <button className="cardDetail_details_cart">ADD TO CART</button>
+                    <ItemCount start={0} stock={item.stock} />
+                </div>
             </div>
 
         </div>
