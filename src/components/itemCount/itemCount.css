@@ -27,6 +27,7 @@
 
 .count-container__button[disabled] {
     color: #999;
+    pointer-events: none;
 }
 
 .count-container__cant {

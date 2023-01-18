@@ -131,9 +131,6 @@ export function getAllItems() {
     });
 }
 
-export default getAllItems;
-
-
 export function getItem(id) {
 
     let itemRequired = items.find((item) => {
@@ -160,3 +157,4 @@ export function getCategoryItems(idCat) {
     });
 }
 
+export default getAllItems;

@@ -38,7 +38,10 @@ function ItemListContainer() {
 
     return (
         <>
-            <h1 className="title"> </h1>
+            <h1 className="title">
+                {/* Titulo de la categoria */}
+            </h1>
+
             <ItemList items={items} />
         </>
     );
