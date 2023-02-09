@@ -141,7 +141,7 @@ export function getItem(id) {
         setTimeout(() => {
             if (id !== undefined) res(itemRequired);
             else rej("No existe el elemento")
-        }, 200);
+        }, 1500);
     });
 }
 
@@ -153,7 +153,7 @@ export function getCategoryItems(idCat) {
         setTimeout(() => {
             if (itemsCategory !== undefined) res(itemsCategory);
             else rej("No existe la categoria")
-        }, 200);
+        }, 1500);
     });
 }
 

@@ -2,7 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import './itemCount.css';
 
-const ItemCount = ({ start, stock }) => {
+
+const ItemCount = ({ start, stock, addToCart }) => {
 
     const [cant, setCant] = useState(start);
 
@@ -15,6 +16,9 @@ const ItemCount = ({ start, stock }) => {
         <div className="countContainer">
 
             <div className="countContainer__contador">
+
+                <button className="cardDetail_details_cart" onClick={() => addToCart(cant)} disabled={cant === start}>ADD TO CART</button>
+
                 <button
                     className="count-container__button"
                     onClick={() => addItem(-1)}

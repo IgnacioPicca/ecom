@@ -66,7 +66,7 @@
     border-top: 1px solid #eee;
 }
 
-.cardDetail_details p {
+.cardInfo {
     font-size: 15px;
     line-height: 22px;
     margin-bottom: 18px;
@@ -82,7 +82,11 @@
     justify-content: space-between;
 }
 
-.cardDetail_details_cart {
+.cartInfo {
+    color: #44a3fb;
+}
+
+.goCartBtn {
     width: 120px;
     padding: 10px;
     cursor: pointer;
@@ -92,9 +96,5 @@
     background-color: #2196f3;
     font-weight: 500;
     line-height: 1.75;
-}
-
-.cardDetail_details_cart:hover {
-    background-color: #0f446f;
-    transition: .5s;
+    font-size: 1em;
 }

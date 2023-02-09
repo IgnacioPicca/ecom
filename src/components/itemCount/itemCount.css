@@ -1,5 +1,5 @@
 .countContainer {
-    width: 100px;
+    width: 200px;
     height: 30px;
     margin-left: 20px;
     justify-content: center;
@@ -32,4 +32,21 @@
 
 .count-container__cant {
     color: rgb(61, 60, 60);
+}
+
+.cardDetail_details_cart {
+    width: 120px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(206, 205, 205);
+    color: #fff;
+    background-color: #2196f3;
+    font-weight: 500;
+    line-height: 1.75;
+}
+
+.cardDetail_details_cart:hover {
+    background-color: #0f446f;
+    transition: .5s;
 }
