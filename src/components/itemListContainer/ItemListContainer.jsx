@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { getAllItems } from "../../services/items.js";
-import { getCategoryItems } from "../../services/items.js";
+import { getAllItems, getCategoryItems } from "../../services/firebase";
 import ItemList from "../itemList/ItemList";
 import { useParams } from "react-router-dom";
 import Spinner from "../Spinner/Spinner.jsx";
+import { toast } from "react-toastify";
 
 function ItemListContainer() {
     const [items, setItems] = useState([]);
@@ -11,31 +11,20 @@ function ItemListContainer() {
     const params = useParams();
     const id = params.id;
 
-    async function getItems() {
-        setLoading(true);
-        if (id === undefined) {
-            try {
-                let res = await getAllItems();
-                setItems(res);
-            } catch (error) {
-                alert(error);
-            } finally {
-                setLoading(false);
-            }
-        } else {
-            try {
-                let res = await getCategoryItems(id);
-                setItems(res);
-            } catch (error) {
-                alert(error);
-            } finally {
-                setLoading(false);
-            }
+    async function getData() {
+        try {
+            setLoading(true);
+            const res = id === undefined ? await getAllItems() : await getCategoryItems(id);
+            setItems(res);
+        } catch (error) {
+            toast.error(error.message);
+        } finally {
+            setLoading(false);
         }
     }
 
     useEffect(() => {
-        getItems();
+        getData();
     }, [id]);
 
     return (

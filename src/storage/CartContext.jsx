@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { toast } from "toastify-js";
 
 
 export const cartContext = createContext();
@@ -7,19 +8,15 @@ export function CartContextProvider(props) {
 
     let [cart, setCart] = useState([]);
 
-    function addItem(item) {
-        let index = -1;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id === item.id) {
-                index = i;
-                break;
-            }
-        }
 
-        if (index === -1) {
+    //COMPROBAR QUE NO AGREGUE EL MISMO ITEM 2 VECES
+    function addItem(item) {
+        const existingItem = cart.find((i) => i.id === item.id);
+
+        if (!existingItem) {
             setCart([...cart, item]);
         } else {
-            alert("Ya hay un item igual");  //IMPLEMENTAR TOSTIFY
+            toast.error("Ya hay un item igual en el carrito");
         }
     }
 

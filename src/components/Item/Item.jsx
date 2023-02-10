@@ -1,7 +1,7 @@
 import ".//item.css"
 import { Link } from "react-router-dom";
 
-function Item({ title, price, detail, imgurl, category, id }) {
+function Item({ title, price, detail, imgurl, id }) {
 
     const url = `/item/${id}`;
 
