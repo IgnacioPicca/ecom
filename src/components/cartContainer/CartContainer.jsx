@@ -61,9 +61,7 @@ function CartContainer() {
             },
             items: items,
             date: new Date(),
-
-            //VER TOTAL PRICE
-            total: getTotalPrice(),
+            total: getTotalPrice(cart),
         };
 
         let id = await createOrder(order);
