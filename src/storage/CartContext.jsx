@@ -11,7 +11,6 @@ export function CartContextProvider(props) {
         return cart.find(item => item.id == itemId);
     }
 
-    //COMPROBAR QUE NO AGREGUE EL MISMO ITEM 2 VECES
     function addItem(item) {
         const existingItem = cart.find((i) => i.id === item.id);
         if (!existingItem) {
