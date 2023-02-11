@@ -8,6 +8,8 @@ import Index from './components/index/Index';
 import NotFound from './components/404/NotFound';
 import { CartContextProvider } from './storage/CartContext';
 import CartContainer from './components/cartContainer/CartContainer';
+import OrderDetail from './components/orderDetail/OrderDetail';
+import { exportData } from './services/firebase';
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
             <Route path="/category/:id" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<CartContainer />} />
+            <Route path="/thank-s2/:orderId" element={<OrderDetail />} />
             <Route path="*" element={<NotFound />} />
 
           </ Routes>

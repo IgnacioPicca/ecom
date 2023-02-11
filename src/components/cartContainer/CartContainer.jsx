@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { cartContext } from "../../storage/CartContext";
 import "./cartContainer.css"
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -14,7 +14,7 @@ import {
     Typography,
 } from '@mui/material'
 import Spinner from "../Spinner/Spinner";
-
+import { createOrder } from "../../services/firebase";
 
 
 function CartContainer() {
@@ -23,6 +23,13 @@ function CartContainer() {
     const { removeItem } = useContext(cartContext);
     const { getTotalPrice } = useContext(cartContext);
     const [isLoading, setLoading] = useState(false);
+    const [orderId, setOrderId] = useState(null);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+    });
+    const navigateTo = useNavigate();
 
     useEffect(() => {
         setLoading(true);
@@ -31,8 +38,43 @@ function CartContainer() {
         }, 800);
     }, [cart]);
 
+    async function makeCheckout(e) {
+        e.preventDefault();
 
-    if (cart.length == 0) {
+        const items = cart.map(item => ({
+            id: item.id,
+            title: item.title,
+            price: item.price,
+            cant: item.cant
+        }))
+
+        const order = {
+            client: {
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+            },
+            items: items,
+            date: new Date(),
+            total: 123,
+        };
+
+        let id = await createOrder(order);
+
+        setOrderId(id)
+
+        navigateTo(`/thank-s2/${id}`);
+    }
+
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    if (cart.length === 0 && orderId === null) {
+
         return (
 
             isLoading ? (
@@ -49,6 +91,7 @@ function CartContainer() {
                 </div >
         )
     }
+
 
     return (
 
@@ -76,7 +119,9 @@ function CartContainer() {
                                     </div>
                                 </div>
                                 <DeleteIcon className="trash" onClick={() => removeItem(item.id)}>
+
                                 </DeleteIcon>
+
                             </div>
                         ))}
 
@@ -142,9 +187,9 @@ function CartContainer() {
                                         type="submit"
                                         variant="contained"
                                         color="primary"
-                                        // className={classes.submitBtn}
                                         disableElevation
                                         fullWidth
+                                        onClick={makeCheckout}
                                     >
                                         Check Out
                                     </Button>

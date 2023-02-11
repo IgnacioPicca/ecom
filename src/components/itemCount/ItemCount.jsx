@@ -8,7 +8,9 @@ const ItemCount = ({ start, stock, addToCart }) => {
     const [cant, setCant] = useState(start);
 
     const addItem = (num) => {
-        setCant(cant + num);
+        if (stock > cant) {
+            setCant(cant + num);
+        }
     };
 
     return (
