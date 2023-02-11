@@ -43,7 +43,9 @@ function NavList() {
 
             <span className="cart nav-item">
                 <Link to="/cart">
-                    <FaShoppingBag /> {cartCant}
+                    <FaShoppingBag /> {
+                        cartCant > 0 ? cartCant : ""
+                    }
                 </Link>
             </span>
 
