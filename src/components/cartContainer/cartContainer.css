@@ -36,7 +36,7 @@
 
 .productsContainer {
     display: block;
-    width: 80%;
+    width: 100%;
 }
 
 .itemContainer {
@@ -50,7 +50,7 @@
 }
 
 .imgContainer {
-    width: 10%;
+    width: 40%;
     height: 50%;
     min-height: 150px;
     min-width: 150px;
