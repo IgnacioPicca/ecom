@@ -1,4 +1,3 @@
-#
 # PiccApple
 
 Proyecto final para el curso de React en Coderhouse.
