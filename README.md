@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+#
+# PiccApple
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Proyecto final para el curso de React en Coderhouse.
 
-## Available Scripts
+Web e-commerce inspirada en Apple. 
 
-In the project directory, you can run:
+En la misma se puede seleccionar ciertos productos para acceder a otra vista más detallada de los mismos, navegar por categorias y agregar al carrito los productos que se deseen comprar. Al ir al carrito se muestra el detalle de la compra y se piden datos básicos para vincular a la orden de compra. Al efectuar la compra se genera un ID que es mostrado al usuario y se envía a Firebase. Se utilizó Firebase para crear una base de datos que contienen los productos y las ordenes de compras realizadas.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm install
+Correr el servidor:
 
-### `npm test`
+npm start
+Se abre una pestaña del navegador en el puerto 3000:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sino copiar esta URL y pegarla en el navegador: http://localhost:3000
+Backend
+Recordar que tiene un backend realizado con Firebase, por si quieren descargar y correr este proyecto, tienen que generar su backend en firebase sino local con data fake. En el archivo .env.example estan las variables que deben ir para poder llenarlas con sus datos de Firebase.
+## Demo
 
-### `npm run build`
+https://piccapple.vercel.app/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Client:** ReactJS - Create React App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**Styles:** Material-UI - CSS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+**Routing:** React Router Dom
 
-## Learn More
+**Database:** Firebase
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Install my-project with npm
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone 
+npm install
+npm run start
+```
+## Screenshots
 
-### Code Splitting
+![App Screenshot](https://drive.google.com/uc?id=1i6ByaC0l7C_nDGWNoaCCh_2o-SZtb5dZ)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+![App Screenshot](https://drive.google.com/uc?id=1WcYXQBnlUJ_OIhdT1XeCeHC42cdexz0E)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+![App Screenshot](https://drive.google.com/uc?id=1x6TTqmx6PdiSwpn1z0ctHMGnK1JqVdyV)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
