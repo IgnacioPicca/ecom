@@ -24,14 +24,6 @@ function CartContainer() {
     const { getTotalPrice } = useContext(cartContext);
     const [isLoading, setLoading] = useState(false);
     const [orderId, setOrderId] = useState(null);
-
-    //IMPLEMENTAR FORM
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-    });
-
     const navigateTo = useNavigate();
 
     useEffect(() => {
@@ -52,12 +44,11 @@ function CartContainer() {
         }))
 
         const order = {
-
             //IMPLEMENTAR FORM
             client: {
                 name: "test",
                 email: "test",
-                phone: 123456,
+                address: "test",
             },
             items: items,
             date: new Date(),
@@ -70,11 +61,6 @@ function CartContainer() {
 
         navigateTo(`/thank-s2/${id}`);
     }
-
-    //IMPLEMENTAR FORM
-    const checkOut = (e) => {
-        setFormData({});
-    };
 
     if (cart.length === 0 && orderId === null) {
 
